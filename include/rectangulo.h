@@ -3,13 +3,19 @@
 
 #include "./figura.h"
 
-class Rectangulo: Figura {
-    private:
+class Rectangulo: public Figura {
+    protected:
         double base, altura;
 
     public:
         Rectangulo();
         Rectangulo(double base, double ancho);
+        
+        double area();
+        double perimetro();
+
+        void imprimir();
+
 };
 
 #endif // !RECTANGULO_H

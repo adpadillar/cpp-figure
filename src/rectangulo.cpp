@@ -1,12 +1,27 @@
 #include "../include/rectangulo.h"
+#include <iostream>
+
+using namespace std;
 
 Rectangulo::Rectangulo() {
-    base = 2;
-    altura = 3;
+    this->base = 2.0;
+    this->altura = 3.0;
 }
 
-Rectangulo::Rectangulo(double b, double h) {
-    base = b;
-    altura = h;
+Rectangulo::Rectangulo(double base, double altura) {
+    this->base = base;
+    this->altura = altura;
+}
+
+double Rectangulo::perimetro() {
+    return 2.0 * (this->base + this->altura);
+}
+
+double Rectangulo::area() {
+    return this->base * this->altura;
+}
+
+void Rectangulo::imprimir() {
+    cout << "Soy un rectangulo de base " << this->base << " y altura " << this->altura << endl;
 }
 

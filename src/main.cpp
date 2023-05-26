@@ -1,6 +1,7 @@
 #include "../include/figura.h"
 #include "../include/rectangulo.h"
 #include "../include/cuadrado.h"
+#include "../include/caja.h"
 
 #include <iostream>
 
@@ -27,6 +28,14 @@ int main() {
     cout << "Perimetro: " << c1.perimetro() << endl;
     cout << "Area: " << c1.area() << endl;
     cout << "Volumen: " << c1.volumen() << endl;
+
+    Caja caja;
+
+    caja.imprimir();
+    cout << "Perimetro: " << caja.perimetro() << endl;
+    cout << "Area: " << caja.area() << endl;
+    cout << "Volumen: " << caja.volumen() << endl;
+
 
     return 0;
 }

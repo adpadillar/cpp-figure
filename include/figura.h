@@ -3,10 +3,10 @@
 
 class Figura {
     public:
-        double perimetro();
-        double area();
-        double volumen();
-        void imprimir();
+        virtual double perimetro();
+        virtual double area();
+        virtual double volumen();
+        virtual void imprimir();
 };
 
 #endif // FIGURA_H 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 #include "../include/caja.h"
 #include "../include/cuadrado.h"
@@ -8,37 +9,21 @@
 using namespace std;
 
 int main() {
-    Figura f1;
+    vector<Figura*> figuras;
+    
+    figuras.push_back(new Figura());
+    figuras.push_back(new Rectangulo(5.0, 7.0));
+    figuras.push_back(new Cuadrado(5.0));
+    figuras.push_back(new Caja());
 
-    f1.imprimir();
-    cout << "Perimetro: " << f1.perimetro() << endl;
-    cout << "Area: " << f1.area() << endl;
-    cout << "Volumen: " << f1.volumen() << endl;
-    cout << endl;
+    for (int i = 0; i < figuras.size(); i++) {
+        figuras[i]->imprimir();
 
-    Rectangulo r1(5.0, 7.0);
-
-    r1.imprimir();
-    cout << "Perimetro: " << r1.perimetro() << endl;
-    cout << "Area: " << r1.area() << endl;
-    cout << "Volumen: " << r1.volumen() << endl;
-    cout << endl;
-
-    Cuadrado c1(5.0);
-
-    c1.imprimir();
-    cout << "Perimetro: " << c1.perimetro() << endl;
-    cout << "Area: " << c1.area() << endl;
-    cout << "Volumen: " << c1.volumen() << endl;
-    cout << endl;
-
-    Caja caja;
-
-    caja.imprimir();
-    cout << "Perimetro: " << caja.perimetro() << endl;
-    cout << "Area: " << caja.area() << endl;
-    cout << "Volumen: " << caja.volumen() << endl;
-    cout << endl;
+        cout << "Perimetro: " << figuras[i]->perimetro() << endl;
+        cout << "Area: " << figuras[i]->area() << endl;
+        cout << "Volumen: " << figuras[i]->volumen() << endl;
+        cout << endl;
+    }
 
     return 0;
 }

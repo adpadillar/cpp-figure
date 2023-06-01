@@ -21,6 +21,10 @@ double Rectangulo::area() {
     return this->base * this->altura;
 }
 
+double Rectangulo::volumen() {
+    return 0.0;
+}
+
 void Rectangulo::imprimir() {
     cout << "Soy un rectangulo de base " << this->base << " y altura " << this->altura << endl;
 }

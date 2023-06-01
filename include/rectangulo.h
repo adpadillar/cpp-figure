@@ -13,6 +13,7 @@ class Rectangulo: public Figura {
         
         double area();
         double perimetro();
+        double volumen();
 
         void imprimir();
 

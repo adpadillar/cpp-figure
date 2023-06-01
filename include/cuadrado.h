@@ -9,6 +9,7 @@ class Cuadrado: public Rectangulo {
         Cuadrado(double lado);
 
         void imprimir();
+        void saludar();
 };
 
 #endif // !CUADRADO_H

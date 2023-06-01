@@ -11,7 +11,6 @@ using namespace std;
 int main() {
     vector<Figura*> figuras;
     
-    figuras.push_back(new Figura());
     figuras.push_back(new Rectangulo(5.0, 7.0));
     figuras.push_back(new Cuadrado(5.0));
     figuras.push_back(new Caja());
@@ -22,6 +21,11 @@ int main() {
         cout << "Perimetro: " << figuras[i]->perimetro() << endl;
         cout << "Area: " << figuras[i]->area() << endl;
         cout << "Volumen: " << figuras[i]->volumen() << endl;
+
+        if (Cuadrado* c = dynamic_cast<Cuadrado*>(figuras[i])) {
+            c->saludar();
+        }
+
         cout << endl;
     }
 
